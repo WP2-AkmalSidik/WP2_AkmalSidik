@@ -13,8 +13,13 @@ class Contoh1 extends CI_Controller{
         Deskripsi Singkat: <br>
         
         Saya sekarang sedang kuliah di univ BSI Tasikmalaya <br>dan baru menjakani Smester 3 di kelas yang berbeda";
-       
+    }
+    public function penjumlahan($n1, $n2){
+        $this->load->model('Model_latihan1');
+        $data['nilai1'] = $n1;
+        $data['nilai2'] = $n2;
+        $data['hasil'] = $this->Model_latihan1->jumlah($n1, $n2);
+        $this->load->view('v-latihan', $data);
+
     }
 }
-
-?>
